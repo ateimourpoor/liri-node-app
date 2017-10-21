@@ -1,0 +1,4 @@
+
+[{"Tweet Text: ":"this is for homework","Tweet Date: ":"Tue Oct 17 16:34:41 +0000 2017"},{"Tweet Text: ":"here is GT test","Tweet Date: ":"Tue Oct 17 16:34:33 +0000 2017"},{"Tweet Text: ":"hello","Tweet Date: ":"Tue Oct 17 16:34:18 +0000 2017"}],
+[{"Tweet Text: ":"this is for homework","Tweet Date: ":"Tue Oct 17 16:34:41 +0000 2017"},{"Tweet Text: ":"here is GT test","Tweet Date: ":"Tue Oct 17 16:34:33 +0000 2017"},{"Tweet Text: ":"hello","Tweet Date: ":"Tue Oct 17 16:34:18 +0000 2017"}],
+[{"Artist Name":"Backstreet Boys","Song Name: ":"I Want It That Way","Preview Song: ":"https://p.scdn.co/mp3-preview/e72a05dc3f69c891e3390c3ceaa77fad02f6b5f6?cid=d078f7ced74a4cccb795ec1efb629146","Album: ":"The Hits--Chapter One"}],

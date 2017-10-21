@@ -8,12 +8,25 @@ var request = require("request");
 
 var fs = require("fs");
 
-// console.log(keys.twitterKeys);
+var logIt = function(data){
+    fs.appendFile("log.txt","\n" + JSON.stringify(data) + "," , function(err) {
+        if (err) {
+            return console.log(err);
+        }
+
+        console.log("log.txt was updated!");
+    });
+
+}
 
 
 var MySpotify = function(song){
+    if (song === undefined) {
+        song = "The Sign";
+    }
 
- var spotify = new Spotify({
+
+    var spotify = new Spotify({
      id: "d078f7ced74a4cccb795ec1efb629146",
      secret: "b9a55a9f1c5e4a2cab6fe39bab05aa0a"
 });
@@ -37,6 +50,7 @@ var MySpotify = function(song){
 
 
             console.log(spotData);
+            logIt(spotData);
 
 
         })
@@ -55,10 +69,12 @@ var MyTweets = function(){
                 tweetdata.push({
                     "Tweet Text: ": tweets[i].text,
                     "Tweet Date: ": tweets[i].created_at,
-                })
-                console.log(tweetdata);
-
+                });
             }
+                console.log(tweetdata);
+                logIt(tweetdata);
+
+
         }else{
             console.log(error);
         }
@@ -66,6 +82,9 @@ var MyTweets = function(){
 }
 
 var myMovie = function(moviename){
+    if (moviename === undefined) {
+        moviename = "Mr. Nobody";
+    }
     var movieData=[];
     var queryURL = "http://www.omdbapi.com/?t=" + moviename + "&y=&plot=short&apikey=40e9cece";
     request(queryURL, function(error, response, body) {
@@ -82,6 +101,7 @@ var myMovie = function(moviename){
 
         })
             console.log(movieData);
+            logIt(movieData);
         }
     })
 }
